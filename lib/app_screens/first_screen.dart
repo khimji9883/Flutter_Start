@@ -1,5 +1,6 @@
 import 'dart:math';
-
+import './../utils/logical_functions.dart'
+import './../utils/ui_const.dart'
 import 'package:flutter/material.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -13,18 +14,9 @@ class FirstScreen extends StatelessWidget {
         child: Text(
           "Your No. is ${yourluckyno()}",
           textDirection: TextDirection.ltr,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 40.0,
-          ),
+          style: titleTextStyle()
         ),
       ),
     );
-  }
-
-  int yourluckyno() {
-    var random = Random();
-    int luckyNumber = random.nextInt(10);
-    return luckyNumber;
   }
 }
